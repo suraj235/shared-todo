@@ -1,0 +1,26 @@
+{
+  "name": "shared-todo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/frontend\" \"npm run dev --workspace=apps/backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "firebase": "^11.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
